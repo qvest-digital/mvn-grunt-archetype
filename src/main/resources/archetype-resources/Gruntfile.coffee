@@ -1,22 +1,22 @@
-destName = "myapp"
 buildDir = "target/grunt"
 coffeeSrcDir = "src/main/coffee"
 coffeeTestSrcDir = "src/test/coffee"
 
 
-bla = ->
-  x = buildDir+"/dist/"+destName+".min.js"
-  y = {}
-  y[x] = ["#{buildDir}/dist/#{destName}.js"]
-  y
-
 module.exports = (grunt) ->
+
+  pom = parsePom grunt.file.read "pom.xml"
+  destName= pom.artifactId
+
+  bla = ->
+    x = "#{buildDir}/dist/#{destName}.min.js"
+    y = {}
+    y[x] = ["#{buildDir}/dist/#{destName}.js"]
+    y
 
   grunt.initConfig
 
     pkg: grunt.file.readJSON "package.json"
-
-    pom: parsePom grunt.file.read "pom.xml"
 
     # Copy needed dependencies to lib folder
     bower:
