@@ -16,6 +16,8 @@ module.exports = (grunt) ->
 
     pkg: grunt.file.readJSON "package.json"
 
+    pom: parsePom grunt.file.read "pom.xml"
+
     # Copy needed dependencies to lib folder
     bower:
       install:
@@ -81,3 +83,11 @@ module.exports = (grunt) ->
   grunt.registerTask "default", ["bower", "coffee", "browserify", "jasmine", "uglify"]
 
 
+# Extract some data from a POM file.
+parsePom = (pom) ->
+  # Helper to extract content from first matching tag with given name.
+  tagContent = (name) -> ((new RegExp "<#{name}>(.*)<\/#{name}>").exec pom)[1]
+  # Extract some content from POM.
+  groupId:    tagContent "groupId"
+  artifactId: tagContent "artifactId"
+  version:    tagContent "version"
