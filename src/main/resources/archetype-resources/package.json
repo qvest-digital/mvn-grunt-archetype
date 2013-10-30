@@ -1,0 +1,10 @@
+{
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-bower-task": "",
+        "grunt-contrib-coffee": "",
+        "grunt-browserify": "",
+        "grunt-contrib-jasmine": "",
+        "grunt-contrib-uglify": ""
+    }
+}
