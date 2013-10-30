@@ -45,6 +45,9 @@
 						</goals>
 						<configuration>
 							<executable>grunt</executable>
+                            <arguments>
+                                <argument>--no-color</argument>
+                            </arguments>
 						</configuration>
 					</execution>
 				</executions>
