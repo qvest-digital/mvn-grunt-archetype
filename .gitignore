@@ -1,2 +1,7 @@
 /target
 /.idea
+/src/main/resources/archetype-resources/node_modules
+/src/main/resources/archetype-resources/bower_components
+/src/main/resources/archetype-resources/.grunt
+/src/main/resources/archetype-resources/target
+/src/main/resources/archetype-resources/.idea
