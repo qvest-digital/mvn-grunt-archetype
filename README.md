@@ -25,7 +25,7 @@ System Requirements
 -------------------
 
 * Grunt.js (needs node.js)
-* Maven 3 (needs Java)
+* Maven 2+ (needs Java)
 
 
 Build Steps
@@ -34,15 +34,11 @@ Build Steps
 * Maven:
     * Get dependencies needed by Grunt to build project
     * Start Grunt
-
-* Grunt:
-    * Get project dependencies
-    * Transcompile CoffeeScript to JavaScript
-    * Run unit tests
-    * Combine JavaScript Files
-    * Minify JavaScript
-
-* Maven
+        * Get project dependencies
+        * Transcompile CoffeeScript to JavaScript
+        * Run unit tests
+        * Combine JavaScript Files
+        * Minify JavaScript
     * Create Jar File
 
 
