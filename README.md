@@ -41,18 +41,3 @@ Build Steps
         * Minify JavaScript
     * Create Jar File
 
-
-Dependency management
----------------------
-
-Install Bower:
-
-    sudo npm install -g bower
-
-Create Dependency file
-
-    bower init
-
-Search for needed dependencies:
-
-    bower search [<name>]
